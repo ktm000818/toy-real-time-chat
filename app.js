@@ -1,8 +1,9 @@
-const express = require('express');
-const socket = require('socket.io');
-const http = require('http');
+import express from 'express';
+import socket from 'socket.io';
+import http from 'http';
 
-const fs = require('fs');
+import fs from 'fs';
+import path from 'path';
 
 // express 객체 생성
 const app = express();
@@ -11,11 +12,10 @@ const server = http.createServer(app);
 
 const io = socket(server);
 
-app.use('/css', express.static('./static/css'))
-app.use('/js', express.static('./static/js'))
+app.use(express.static(path.resolve(__dirname, "..", "chat-ui-react", "dist")))
 
 app.get("/", (req, res) => {
-    fs.readFile('static/index.html', (err, data) => {
+    fs.readFile('../chat-ui-react/dist/index.html', (err, data) => {
         if (err) {
             console.error('error');
         } else {
