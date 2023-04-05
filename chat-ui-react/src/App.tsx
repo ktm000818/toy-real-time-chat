@@ -15,13 +15,13 @@ const App = () => {
     useEffect(() => {
         socketRef.current = io();
 
-        socketRef.current.on('connect', function () {
-            let name = prompt('Hello! set your name!', '')
+        let name = prompt('Hello! set your name!', '')
 
-            if (!name) {
-                name = 'unknown'
-            }
-            
+        if (!name) {
+            name = 'unknown'
+        }
+
+        socketRef.current.on('connect', function () {
             socketRef.current.emit('newUser', name)
         })
 
