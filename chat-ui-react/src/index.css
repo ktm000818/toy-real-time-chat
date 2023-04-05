@@ -8,40 +8,51 @@
     height: 800px;
   }
   
-  #chat {
+  #chatWrapper {
     height: 90%;
     width: 100%;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper-me {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 10px 20px 10px 0px;
+  }
+
+  .wrapper-other{
+    display: flex;
+    margin: 10px 0px 10px 20px;
   }
   
   .connect {
-    width: 90%;
-    margin: auto;
-    background-color: aquamarine;
+    margin: 10px 20px 15px 20px;
+    background-color: lawngreen;
     text-align: center;
-    margin-top: 10px;
   }
   
   .disconnect {
-    width: 90%;
-    margin: auto;
-    background-color: indianred;
+    margin: 10px 20px 15px 20px;
+    background-color: red;
     text-align: center;
-    margin-top: 10px;
   }
   
   .me {
-    width: 90%;
-    margin: auto;
-    background-color: lemonchiffon;
     border-radius: 5px;
-    margin-top: 10px;
+    background-color: lemonchiffon;
+    width: 100px;
+    padding: 10px;
+    overflow: hidden;
+    word-break: break-word;
   }
   
   .other {
-    width: 90%;
-    margin: auto;
-    background-color: white;
     border-radius: 5px;
-    margin-top: 10px;
+    background-color: white;
+    width: 100px;
+    padding: 10px;
+    overflow: hidden;
+    word-break: break-word;
   }
