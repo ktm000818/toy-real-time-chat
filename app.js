@@ -46,7 +46,7 @@ io.sockets.on('connection', (socket) => {
 
     socket.on('disconnect', () => {
         console.log(socket.name + " is disconnected");
-        socket.broadcast.emit('update', {type: "disconnect", name: "SERVER", message: socket.name + "is disconnected"})
+        socket.broadcast.emit('update', {type: "disconnect", name: "SERVER", message: socket.name + " is disconnected"})
     })
 })
 
