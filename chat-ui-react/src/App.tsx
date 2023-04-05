@@ -21,29 +21,33 @@ const App = () => {
             if (!name) {
                 name = 'unknown'
             }
-
+            
             socketRef.current.emit('newUser', name)
         })
 
         socketRef.current.on('update', function (data: any) {
             let className = ''
-    
+
             switch (data.type) {
                 case 'message':
                     className = 'other'
                     break
-    
+
                 case 'connect':
                     className = 'connect'
                     break
-    
+
                 case 'disconnect':
                     className = 'disconnect'
                     break
             }
-    
+
             setMessages(prevMessages => [...prevMessages, { message: `${data.name}: ${data.message}`, class: className }])
         })
+
+        return () => {
+            socketRef.current = null;
+        }
     }, [])
 
 
@@ -59,12 +63,14 @@ const App = () => {
 
     return (
         <div id="main">
-            <div id="chat">
+            <div id="chatWrapper">
                 {/* <!-- 채팅 메시지 영역 --> */}
                 {(messages || []).map((message, _) => {
                     return (
-                        <div key={`message_${_}`} className={message.class}>
-                            {`${message.message}`}
+                        <div key={`message_${_}`} className={`wrapper-${message.class}`}>
+                            <div className={message.class}>
+                                {`${message.message}`}
+                            </div>
                         </div>
                     )
                 })}
