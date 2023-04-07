@@ -1,58 +1,108 @@
 #main {
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 20px;
-    background-color: lightblue;
-    text-align: center;
-    width: 500px;
-    height: 800px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 20px;
+  background-color: lightblue;
+  text-align: center;
+  width: 500px;
+  height: 800px;
+}
+
+#chatWrapper {
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-me {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px 20px 10px 0px;
+}
+
+.wrapper-other {
+  display: flex;
+  margin: 10px 0px 10px 20px;
+}
+
+.connect {
+  margin: 10px 20px 15px 20px;
+  background-color: lawngreen;
+  text-align: center;
+}
+
+.disconnect {
+  margin: 10px 20px 15px 20px;
+  background-color: red;
+  text-align: center;
+}
+
+.me {
+  border-radius: 5px;
+  background-color: lemonchiffon;
+  min-width: 50px;
+  max-width: 300px;
+  padding: 10px;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.other {
+  border-radius: 5px;
+  background-color: white;
+  min-width: 50px;
+  max-width: 300px;
+  padding: 10px;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  #main {
+    width: 740px;
+    height: 1140px;
   }
-  
-  #chatWrapper {
-    height: 90%;
-    width: 100%;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width: 480px) and (max-width: 767px) {
+  #main {
+    width: 740px;
+    height: 1140px;
+  }
+}
+
+/* 모바일 (해상도 ~ 479px)*/
+@media all and (max-width: 479px) {
+  #main {
+    width: 400px;
+    height: 840px;
+    margin: 45px auto auto;
+  }
+}
+
+/* 모바일 (SE등) */
+@media all and (max-width: 400px) {
+  #main {
+    width: 350px;
+    height: 615px;
+    margin: 45px auto auto;
   }
 
-  .wrapper-me {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 10px 20px 10px 0px;
-  }
-
-  .wrapper-other{
-    display: flex;
-    margin: 10px 0px 10px 20px;
-  }
-  
-  .connect {
-    margin: 10px 20px 15px 20px;
-    background-color: lawngreen;
-    text-align: center;
-  }
-  
-  .disconnect {
-    margin: 10px 20px 15px 20px;
-    background-color: red;
-    text-align: center;
-  }
-  
   .me {
-    border-radius: 5px;
-    background-color: lemonchiffon;
-    width: 100px;
-    padding: 10px;
-    overflow: hidden;
-    word-break: break-word;
+    min-width: 50px;
+    max-width: 150px;
   }
-  
+
   .other {
-    border-radius: 5px;
-    background-color: white;
-    width: 100px;
-    padding: 10px;
-    overflow: hidden;
-    word-break: break-word;
+    min-width: 50px;
+    max-width: 150px;
   }
+}
