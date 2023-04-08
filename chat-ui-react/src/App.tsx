@@ -64,7 +64,7 @@ const App = () => {
 
   const checkScrollBottom = () => {
     const chatArea = messageRef.current;
-    if (chatArea.clientHeight + chatArea.scrollTop >= chatArea.scrollHeight) {
+    if (Math.round(chatArea.clientHeight + chatArea.scrollTop) >= chatArea.scrollHeight) {
       goBottom.current = true;
     } else {
       goBottom.current = false;
