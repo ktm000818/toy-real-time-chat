@@ -1,4 +1,4 @@
-# real-time-chat
+# real-time-chat 실시간 채팅 프로그램
 
 ### 사용방법
 
