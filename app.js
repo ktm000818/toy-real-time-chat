@@ -22,7 +22,6 @@ app.get("/", (req, res) => {
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write(data);
       res.end();
-      console.log("유저가 / 으로 접속했습니다.");
     }
   });
 });
