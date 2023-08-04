@@ -1,6 +1,6 @@
 # real-time-chat 실시간 채팅 프로그램
 
-사용 기술: react, node.js, babel, webpack
+사용 기술: javascript(react), typescript node.js, babel, webpack, socket.io,
 
 ### 사용방법
 
