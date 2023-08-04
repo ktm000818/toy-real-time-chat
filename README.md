@@ -1,5 +1,7 @@
 # real-time-chat 실시간 채팅 프로그램
 
+사용 기술: react, node.js, babel, webpack
+
 ### 사용방법
 
 1.root 폴더에서 npm run start 커맨드를 실행해 서버 실행.
